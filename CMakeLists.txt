@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   image_recognition_msgs
 )
 
+find_package(CUDA REQUIRED)
+
 catkin_package()
 
 # include_directories(include)
@@ -27,5 +29,5 @@ add_executable(${PROJECT_NAME}_node src/openpose_ros_node.cpp)
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
   /home/geronimo/openpose/build/lib/libopenpose.so
-  /home/geronimo/openpose/3rdparty/caffe/.build_release/lib/libcaffe.so
+  /ome/geronimo/openpose/3rdparty/caffe/.build_release/lib/libcaffe.so
 )
